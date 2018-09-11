@@ -1,0 +1,6 @@
+
+<RCC>
+  <qresource prefix="parametricfittingstep">
+    <file>images/fitting.png</file>
+  </qresource>
+</RCC>
