@@ -1,9 +1,27 @@
 import numpy as np
-import utils
+from Tools import Tools
 
 
 class Optimization(object):
+    """
+    This is the Expectation Maximization algorithm class to compute the fitting parameters.
+    The idea of this algorithm is first to guess the values of parameters, and then use the Bayes' theorem
+    to compute the posterior probability distributions P(m|x_n) of mixture components, which is the
+    expectation of the algorithm. The updated parameter values are then found by minimizing the expectation og
+    the negative log likelihood function.
+    """
     def __init__(self, X, Y, sigma2=None, max_iterations=100, tolerance=0.001, w=0, *args, **kwargs):
+        """
+
+        :param X: The first point set (the fiducial landmarks from the heart image).
+        :param Y: The second point set (the material points fron the scaffold).
+        :param sigma2: Isotropic covariance - must be initialized.
+        :param max_iterations: Maximum fitting iterations.
+        :param tolerance: Error tolerance.
+        :param w: The weight of the uniform distribution. must be 0 =< w >= 1.
+        :param args:
+        :param kwargs:
+        """
 
         if type(X) is not np.ndarray or X.ndim != 2:
             raise ValueError("Fiducial landmarks must be a numpy array with at least 2 dimensions.")
@@ -27,11 +45,12 @@ class Optimization(object):
         self.P1 = np.zeros((self.M,))
         self.Np = 0
         self.q = None
+        self.tools = Tools()
 
     def fit(self, callback=lambda **kwargs: None):
         self.transform_scaffold()
         if self.sigma2 is None:
-            self.sigma2 = utils.initialize_sigma2(self.X, self.TY)
+            self.sigma2 = self.tools.initialize_sigma2(self.X, self.TY)
         self.q = -self.err - self.N * self.D / 2 * np.log(self.sigma2)
         while self.iteration < self.max_iterations and self.err > self.tolerance:
             self.iterate()
