@@ -1,0 +1,74 @@
+{
+    "fiducial-markers": {
+        "active-marker-label": "1", 
+        "display-fiducial-markers": true
+    }, 
+    "frames-per-second": 25, 
+    "generator_settings": {
+        "deleteElementRanges": "", 
+        "displayAxes": false, 
+        "displayElementNumbers": false, 
+        "displayLines": true, 
+        "displayNodeDerivatives": false, 
+        "displayNodeNumbers": false, 
+        "displaySurfaces": true, 
+        "displaySurfacesExterior": true, 
+        "displaySurfacesTranslucent": true, 
+        "displaySurfacesWireframe": false, 
+        "displayXiAxes": false, 
+        "meshTypeName": "3D Heart Ventricles with Base 1", 
+        "meshTypeOptions": {
+            "Base height": 0.1, 
+            "Base thickness": 0.05, 
+            "Element length ratio equator/apex": 0.5, 
+            "LV base flatten angle degrees": 25.0, 
+            "LV base flatten ratio": 0.75, 
+            "LV outlet inner diameter": 0.3, 
+            "LV outlet wall thickness": 0.02, 
+            "LV wall thickness": 0.15, 
+            "LV wall thickness ratio apex": 0.5, 
+            "LV wall thickness ratio base": 0.8, 
+            "Length ratio": 1.8, 
+            "Number of elements across septum": 5, 
+            "Number of elements around": 11, 
+            "Number of elements below septum": 2, 
+            "Number of elements through LV wall": 1, 
+            "Number of elements up": 4, 
+            "Outlet element length": 0.1, 
+            "Outlet rotation degrees": 5.0, 
+            "RV free wall thickness": 0.05, 
+            "RV outlet inner diameter": 0.3, 
+            "RV outlet wall thickness": 0.02, 
+            "RV width": 0.2, 
+            "Refine": false, 
+            "Refine number of elements surface": 4, 
+            "Refine number of elements through LV wall": 1, 
+            "Refine number of elements through RV wall": 1, 
+            "Septum arc angle degrees": 125.0, 
+            "Use cross derivatives": false
+        }, 
+        "scale": "1*1*1"
+    }, 
+    "image_plane_settings": {
+        "alignment": {
+            "euler_angles": [
+                0.15818609354718166, 
+                0.44827407430510524, 
+                -1.5555102575467559
+            ], 
+            "offset": [
+                -0.09233080660284712, 
+                0.06835315501326006, 
+                -0.38632422882871637
+            ], 
+            "scale": [
+                0.9999999956061985, 
+                0.9999999179559937, 
+                0.9999999391123578
+            ]
+        }, 
+        "display-image-plane": true, 
+        "image-plane-fixed": false
+    }, 
+    "time-loop": false
+}
