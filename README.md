@@ -1,8 +1,8 @@
 # mapclientplugins.parametricfittingstep
 MAP Client plugin for performing rigid and non-rigid fitting of a scaffold to image data 
 
-This plugin works as a stand-alone module to fit a heart finite element model (and potentially any other models) to image data.
-For the current version (0.1.0), the module requires a 2D image of heart and a 3D, tricubic hermite mesh for the fitting. 
+This plugin works as a stand-alone module to fit two sets of data.
+The current version (0.1.0) was built to satisfy the requirements to fit a 3D, tricubic hermite heart FE model to 2D image of heart. 
 
 # Requirements: 
 - Numpy
