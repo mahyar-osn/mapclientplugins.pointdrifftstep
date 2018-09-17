@@ -6,7 +6,7 @@ class RigidFitting(Optimization):
     def __init__(self, R=None, t=None, s=None, *args, **kwargs):
         super(RigidFitting, self).__init__(*args, **kwargs)
         if self.D != 2 and self.D != 3:
-            message = 'Rigid registration only supports 2D or 3D point clouds. Instead got {}.'.format(self.D)
+            message = 'Rigid registration only supports 2D or 3D. Instead got {}.'.format(self.D)
             raise ValueError(message)
         if s == 0:
             raise ValueError('A zero scale factor is not supported.')
