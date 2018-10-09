@@ -12,6 +12,7 @@ class DeformableFitting(Optimization):
         self.beta = 2 if alpha is None else beta
         self.W = np.zeros((self.M, self.D))
         self.G = Tools.make_kernel(self.Y, self.beta)
+        self.TY = None
 
     def update_transform(self):
         A = np.dot(np.diag(self.P1), self.G) + self.alpha * self.sigma2 * np.eye(self.M)
