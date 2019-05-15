@@ -1,4 +1,4 @@
-# mapclientplugins.parametricfittingstep
+# mapclientplugins.pointdrifftstep
 MAP Client plugin for performing rigid and non-rigid fitting of a scaffold to image data 
 
 This plugin works as a stand-alone module to fit two sets of data.
